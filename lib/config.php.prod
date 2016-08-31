@@ -8,3 +8,6 @@ $app['twig_dirs'] = [
 $app['debug'] = false;
 $app['twig_debug'] = false;
 $app['twig_cache_dir'] = __DIR__ . '/../cache/twig';
+
+$app['software_version'] = 'v0.0.1';
+$app['base_url'] = 'silex.dev';

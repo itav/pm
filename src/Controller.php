@@ -11,9 +11,10 @@ class Controller
     public function someAction(Application $app, Request $request)
     {
 
-        //return $app['twig']->render('page.twig');
-        return 'works!';
+        return $app['twig']->render('login.twig');
+        //return 'works!';
 
     }
+
 
 }
