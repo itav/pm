@@ -1,0 +1,10 @@
+<?php
+
+
+$app['twig_dirs'] = [
+    __DIR__ . '/../src/views',
+];
+
+$app['debug'] = true;
+$app['twig_debug'] = true;
+$app['twig_cache_dir'] = __DIR__ . '/../cache/twig';
