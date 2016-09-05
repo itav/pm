@@ -1,6 +1,7 @@
 <?php
 
 require_once 'config.php';
+
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => $app['twig_dirs'],
     'debug' => $app['twig_debug'],
@@ -30,3 +31,11 @@ $app->register(new Silex\Provider\AssetServiceProvider(), [
         ],
     ],
 ]);
+
+$auth = function () use ($app) {
+    session_start();
+    if($_SESSION['is_logged'] === true){
+        return null;
+    }
+    return $app->redirect('/login');
+};
